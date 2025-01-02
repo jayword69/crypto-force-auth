@@ -159,6 +159,14 @@
             alert(error.message);
         }
     });
+
+    import { setPersistence, browserLocalPersistence } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+
+    // Establecer la persistencia
+    setPersistence(auth, browserLocalPersistence).catch((error) => {
+        console.error("Error configurando la persistencia:", error);
+    });
+
 </script>
 </body>
 </html>
